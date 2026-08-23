@@ -1,0 +1,9 @@
+langchain
+faiss-cpu
+sentence-transformers
+streamlit
+google-api-python-client
+msal
+pypdf
+pytest
+python-dotenv
