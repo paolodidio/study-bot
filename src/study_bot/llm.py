@@ -46,6 +46,14 @@ def answer_question(
     # Prima recuperiamo i passaggi più pertinenti; poi li uniamo in un unico
     # testo da affiancare alla domanda nel prompt.
     docs = get_relevant_documents(vector_store, question, k=k)
+
+    print("\nChunk recuperati:")
+    for index, doc in enumerate(docs, start=1):
+        print(
+            f"[{index}] fonte={doc.metadata.get('source')} "
+            f"chunk_index={doc.metadata.get('chunk_index')}"
+        )
+
     context = "\n\n".join(doc.page_content for doc in docs)
 
     system_prompt = build_system_prompt()
