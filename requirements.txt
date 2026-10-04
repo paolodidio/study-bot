@@ -1,9 +1,13 @@
-langchain
+# PyTorch CUDA 12.8 build (RTX 5080 / compute capability sm_120).
+--extra-index-url https://download.pytorch.org/whl/cu128
+
 faiss-cpu
+langchain-community
+langchain-core
+langchain-huggingface
 sentence-transformers
-streamlit
-google-api-python-client
-msal
 pypdf
 pytest
 python-dotenv
+torch==2.11.0+cu128
+transformers
